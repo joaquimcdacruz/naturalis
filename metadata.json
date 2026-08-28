@@ -1,0 +1,6 @@
+{
+  "name": "Naturalis Gourmet - Geladinhos Artesanais & Pedidos WhatsApp",
+  "description": "Loja virtual e catálogo interativo da Naturalis Gourmet para pedidos de geladinhos gourmet artesanais via WhatsApp, controle de estoque com baixa automática, kits promocionais, gestão de pedidos, taxas de entrega por bairro e impressão térmica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

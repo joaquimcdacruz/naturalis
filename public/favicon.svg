@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8CC63F" />
+      <stop offset="100%" stop-color="#5E9628" />
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="195" fill="#23542B" />
+  <circle cx="200" cy="200" r="164" fill="none" stroke="#E05B24" stroke-width="12" />
+  <circle cx="200" cy="200" r="154" fill="#24582E" />
+  <g fill="#FFFFFF">
+    <polygon points="175,110 178,118 186,118 180,123 182,131 175,126 168,131 170,123 164,118 172,118" />
+    <polygon points="200,95 204,106 215,106 206,112 209,122 200,116 191,122 194,112 185,106 196,106" />
+    <polygon points="225,110 228,118 236,118 230,123 232,131 225,126 218,131 220,123 214,118 222,118" />
+  </g>
+  <g transform="translate(122, 134) scale(0.95)">
+    <path d="M 2 18 C 6 4, 26 -2, 38 4 C 36 18, 22 26, 4 22 C 2 21, 1 19, 2 18 Z" fill="url(#leafGrad)" />
+  </g>
+  <text x="195" y="186" text-anchor="middle" fill="#FFFFFF" font-family="'Playfair Display', Georgia, serif" font-weight="800" font-size="54" letter-spacing="-1">Naturalis</text>
+  <circle cx="280" cy="150" r="7.5" fill="#E05B24" />
+  <text x="200" y="218" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="500" font-size="24" letter-spacing="1.5">Gourmet</text>
+</svg>

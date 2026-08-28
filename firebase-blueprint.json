@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GeladinhosGourmetStore",
+  "description": "Database schema for Naturalis Gourmet Geladinhos Artesanais store",
+  "entities": {
+    "products": {
+      "title": "Product",
+      "description": "Store products with real-time stock and pricing",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "tagline": { "type": "string" },
+        "description": { "type": "string" },
+        "price": { "type": "number" },
+        "originalPrice": { "type": "number" },
+        "image": { "type": "string" },
+        "badges": { "type": "array", "items": { "type": "string" } },
+        "ingredients": { "type": "array", "items": { "type": "string" } },
+        "allergens": { "type": "array", "items": { "type": "string" } },
+        "volumeMl": { "type": "number" },
+        "isAvailable": { "type": "boolean" },
+        "stockQuantity": { "type": "number" },
+        "trackStock": { "type": "boolean" },
+        "minStockAlert": { "type": "number" },
+        "rating": { "type": "number" },
+        "reviewsCount": { "type": "number" },
+        "flavorProfile": { "type": "object" }
+      },
+      "required": ["id", "name", "price", "isAvailable"]
+    },
+    "combos": {
+      "title": "Combo",
+      "description": "Promotional combos and kits",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "description": { "type": "string" },
+        "itemsCount": { "type": "number" },
+        "price": { "type": "number" },
+        "originalPrice": { "type": "number" },
+        "image": { "type": "string" },
+        "badge": { "type": "string" },
+        "includesThermalBag": { "type": "boolean" },
+        "isCustomizable": { "type": "boolean" }
+      },
+      "required": ["id", "title", "price", "itemsCount"]
+    },
+    "categories": {
+      "title": "Category",
+      "description": "Menu categories",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "icon": { "type": "string" },
+        "color": { "type": "string" },
+        "description": { "type": "string" },
+        "order": { "type": "number" }
+      },
+      "required": ["id", "label"]
+    },
+    "neighborhoods": {
+      "title": "NeighborhoodFee",
+      "description": "Delivery neighborhoods and calculated delivery fees",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "fee": { "type": "number" },
+        "estimatedTimeMin": { "type": "number" },
+        "isActive": { "type": "boolean" },
+        "notes": { "type": "string" }
+      },
+      "required": ["name", "fee", "estimatedTimeMin"]
+    },
+    "settings": {
+      "title": "StoreSettings",
+      "description": "Global store settings, opening hours, delivery status, PIX config",
+      "type": "object",
+      "properties": {
+        "storeName": { "type": "string" },
+        "tagline": { "type": "string" },
+        "whatsappNumber": { "type": "string" },
+        "city": { "type": "string" },
+        "isOpen": { "type": "boolean" },
+        "deliveryEnabled": { "type": "boolean" },
+        "pickupEnabled": { "type": "boolean" },
+        "minOrderValue": { "type": "number" },
+        "freeDeliveryThreshold": { "type": "number" },
+        "standardDeliveryFee": { "type": "number" }
+      }
+    },
+    "orders": {
+      "title": "Order",
+      "description": "Customer orders placed via WhatsApp or checkout",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "orderId": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "subtotal": { "type": "number" },
+        "deliveryFee": { "type": "number" },
+        "total": { "type": "number" },
+        "status": { "type": "string" },
+        "paymentStatus": { "type": "string" },
+        "customer": { "type": "object" },
+        "items": { "type": "array" }
+      },
+      "required": ["orderId", "total", "customer"]
+    },
+    "stock_movements": {
+      "title": "StockMovement",
+      "description": "Inventory movement audit trail",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "productId": { "type": "string" },
+        "productName": { "type": "string" },
+        "quantityChanged": { "type": "number" },
+        "previousStock": { "type": "number" },
+        "newStock": { "type": "number" },
+        "reason": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["productId", "quantityChanged", "newStock", "reason"]
+    }
+  }
+}

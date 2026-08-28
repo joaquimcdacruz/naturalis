@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <filter id="logoShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.25" flood-color="#0d2813" />
+    </filter>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8CC63F" />
+      <stop offset="100%" stop-color="#5E9628" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer scalloped green badge -->
+  <path d="M 375 200 Q 388.9 225.2, 351.6 275.9 Q 357.2 304.3, 311.2 334.8 Q 308.3 363.6, 255.4 374 Q 244.6 401.3, 189.6 391.8 Q 172.1 414.7, 120.3 384.8 Q 98.7 401.8, 59.9 356.9 Q 36.4 366.1, 14.8 312.4 Q -5.3 313.6, -1.9 256.4 Q -18.7 248.8, 3.2 195.1 Q -7.3 166.7, 38.7 124.1 Q 35.8 95.3, 88.7 84.9 Q 99.5 57.6, 154.5 67.1 Q 172 44.2, 223.8 74.1 Q 245.4 57.1, 284.2 102 Q 307.7 92.8, 329.3 146.5 Q 349.4 145.3, 346 202.5 Z" fill="#23542B" />
+  
+  <!-- Exact calculated 24 scalloped petals -->
+  <path d="M 375 200 C 375 210, 390 220, 380 234 C 370 248, 375 264, 360 275 C 345 286, 344 304, 325 311 C 306 318, 299 336, 277 338 C 255 340, 243 356, 219 353 C 195 350, 180 363, 156 355 C 132 347, 115 356, 94 343 C 73 330, 56 334, 40 316 C 24 298, 9 297, 0 275 C -9 253, -20 246, -17 222 C -14 198, -21 187, -11 166 C -1 145, -3 130, 14 113 C 31 96, 36 79, 58 68 C 80 57, 91 39, 115 35 C 139 31, 156 16, 180 20 C 204 24, 224 13, 246 23 C 268 33, 289 27, 307 43 C 325 59, 343 59, 355 79 C 367 99, 381 106, 385 130 C 389 154, 397 167, 390 190 Z" fill="#23542B" filter="url(#logoShadow)" />
+
+  <!-- Outer orange ring -->
+  <circle cx="200" cy="200" r="164" fill="none" stroke="#E05B24" stroke-width="9" />
+
+  <!-- Inner fine dark border -->
+  <circle cx="200" cy="200" r="156" fill="none" stroke="#1E3F28" stroke-width="2.5" />
+
+  <!-- Inner background -->
+  <circle cx="200" cy="200" r="154" fill="#24582E" />
+
+  <!-- 28 Decorative dots -->
+  <g fill="#E05B24">
+    <circle cx="200" cy="58" r="3.5" />
+    <circle cx="231.8" cy="61.6" r="3.5" />
+    <circle cx="261.8" cy="72.3" r="3.5" />
+    <circle cx="288.4" cy="89.5" r="3.5" />
+    <circle cx="310.2" cy="112.5" r="3.5" />
+    <circle cx="325.9" cy="140.2" r="3.5" />
+    <circle cx="334.8" cy="171.1" r="3.5" />
+    <circle cx="336.2" cy="203.4" r="3.5" />
+    <circle cx="330.1" cy="235.1" r="3.5" />
+    <circle cx="316.8" cy="264.4" r="3.5" />
+    <circle cx="296.8" cy="289.8" r="3.5" />
+    <circle cx="271.1" cy="310" r="3.5" />
+    <circle cx="241" cy="323.7" r="3.5" />
+    <circle cx="208.2" cy="330.3" r="3.5" />
+    <circle cx="174.6" cy="329.4" r="3.5" />
+    <circle cx="142.3" cy="321.1" r="3.5" />
+    <circle cx="113" cy="305.8" r="3.5" />
+    <circle cx="88.2" cy="284.2" r="3.5" />
+    <circle cx="69.4" cy="257.6" r="3.5" />
+    <circle cx="57.7" cy="227.6" r="3.5" />
+    <circle cx="53.8" cy="195.4" r="3.5" />
+    <circle cx="57.9" cy="163.2" r="3.5" />
+    <circle cx="70.1" cy="133.4" r="3.5" />
+    <circle cx="89.7" cy="107.8" r="3.5" />
+    <circle cx="115.5" cy="88" r="3.5" />
+    <circle cx="145.8" cy="74.7" r="3.5" />
+    <circle cx="178.6" cy="68.8" r="3.5" />
+  </g>
+
+  <!-- Stars -->
+  <g fill="#FFFFFF">
+    <polygon points="175,110 178,118 186,118 180,123 182,131 175,126 168,131 170,123 164,118 172,118" transform="rotate(-12 175 120)" />
+    <polygon points="200,95 204,106 215,106 206,112 209,122 200,116 191,122 194,112 185,106 196,106" transform="scale(1.08) translate(-15, -8)" />
+    <polygon points="225,110 228,118 236,118 230,123 232,131 225,126 218,131 220,123 214,118 222,118" transform="rotate(12 225 120)" />
+  </g>
+
+  <!-- Green Leaf -->
+  <g transform="translate(122, 134) scale(0.95)">
+    <path d="M 2 18 C 6 4, 26 -2, 38 4 C 36 18, 22 26, 4 22 C 2 21, 1 19, 2 18 Z" fill="url(#leafGrad)" />
+    <path d="M 4 21 Q 20 12, 36 5" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.85" fill="none" />
+    <path d="M 16 15 Q 22 18, 26 19" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.7" fill="none" />
+    <path d="M 24 11 Q 28 8, 31 7" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.7" fill="none" />
+  </g>
+
+  <!-- Typography: Naturalis -->
+  <text x="195" y="186" text-anchor="middle" fill="#FFFFFF" font-family="'Playfair Display', Georgia, serif" font-weight="800" font-size="54" letter-spacing="-1">Naturalis</text>
+
+  <!-- Orange dot for 'i' -->
+  <circle cx="280" cy="150" r="7.5" fill="#E05B24" />
+
+  <!-- Subtitle: Gourmet -->
+  <text x="200" y="218" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="500" font-size="24" letter-spacing="1.5">Gourmet</text>
+
+  <!-- Instagram Handle -->
+  <g transform="translate(132, 276)">
+    <rect x="0" y="0" width="16" height="16" rx="4.5" fill="none" stroke="#FFFFFF" stroke-width="1.8" />
+    <circle cx="8" cy="8" r="4" fill="none" stroke="#FFFFFF" stroke-width="1.6" />
+    <circle cx="12.5" cy="3.5" r="0.9" fill="#FFFFFF" />
+    <text x="22" y="13" fill="#FFFFFF" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="600" font-size="15" letter-spacing="0.2">@naturalisgourmet</text>
+  </g>
+</svg>

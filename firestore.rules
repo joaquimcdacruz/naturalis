@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Products collection: public read, allow updates from application
+    match /products/{productId} {
+      allow read, write: if true;
+    }
+
+    // Combos collection: public read, allow updates
+    match /combos/{comboId} {
+      allow read, write: if true;
+    }
+
+    // Categories collection: public read, allow updates
+    match /categories/{categoryId} {
+      allow read, write: if true;
+    }
+
+    // Neighborhoods collection: public read, allow updates
+    match /neighborhoods/{neighborhoodId} {
+      allow read, write: if true;
+    }
+
+    // Store settings doc: public read, allow updates
+    match /settings/{docId} {
+      allow read, write: if true;
+    }
+
+    // Orders collection: public create and read/update for order management
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+
+    // Stock movements audit log
+    match /stock_movements/{movementId} {
+      allow read, write: if true;
+    }
+
+    // Default rule for other documents
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
